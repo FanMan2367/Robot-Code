@@ -55,3 +55,20 @@ When Green Flag Pressed
 Forever()
 If ({speed = 10})
 |set speed to 30|
+
+When Green Flag Pressed
+|set Servo13 to 0|
+
+When key [t] pressed
+|change Servo13 by -15|
+
+When key [y] pressed 
+|change Servo13 by 15|
+
+When Green Flag Pressed 
+If {Servo13 = 105} then
+|set Servo13 to 75|
+
+When Green Flag Pressed 
+If {Servo13 = -105} then
+|set Servo13 to -75|
