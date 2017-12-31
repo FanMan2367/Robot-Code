@@ -72,3 +72,19 @@ If {Servo13 = 105} then
 When Green Flag Pressed 
 If {Servo13 = -105} then
 |set Servo13 to -75|
+
+When Green Flag Pressed 
+Forever()
+(If {pin13 = 1})
+|set power 7 to 0|
+|set power 8 to 0|
+|set power 11 to 0|
+|set power 12 to speed|
+
+When Green Flag Pressed 
+Forever()
+(If {pin16 = 1})
+|set power 7 to 0|
+|set power 8 to 0|
+|set power 11 to speed|
+|set power 12 to 0|
