@@ -3,29 +3,55 @@ Broadcast setpins
 Set speed to 30
 Forever()
 (If {key {up arrow}or{left arrow}or{back arrow}or{right arrow}} pressed then)
-({set power 7 to 0})
-({set power 8 to 0})
-({set power 11 to 0})
-({set power 12 to 0})
+(|set power 7 to 0|)
+(|set power 8 to 0|)
+(|set power 11 to 0|)
+(|set power 12 to 0|)
 
 When Green Flag Pressed
 Forever()
 (If {key {space} pressed} then)
-({set power 7 to 0})
-({set power 8 to 0})
-({set power 11 to 0})
-({set power 12 to 0})
+(|set power 7 to 0|)
+(|set power 8 to 0|)
+(|set power 11 to 0|)
+(|set power 12 to 0|)
 
 When [w] pressed
-|set power 7 to 1|
+|set power 7 to speed|
 |set power 8 to 0|
 |set power 11 to 0|
 |set power 12 to 0|
 
 When [a] pressed
 |set power 7 to 0|
-|set power 8 to 1|
+|set power 8 to speed|
 |set power 11 to 0|
 |set power 12 to 0|
 
-When 
+When [s] pressed
+|set power 7 to 0|
+|set power 8 to 0|
+|set power 11 to speed|
+|set power 12 to 0
+
+When [d] pressed
+|set power 7 to 0|
+|set power 8 to 0|
+|set power 11 to 0|
+|set power 12 to speed|
+
+When [q] pressed
+|change speed by 5|
+
+When [e] pressed
+|change speed by -5|
+
+When Green Flag Pressed
+Forever()
+If ({speed = 60})
+|set speed to 30|
+
+When Green Flag Pressed
+Forever()
+If ({speed = 10})
+|set speed to 30|
