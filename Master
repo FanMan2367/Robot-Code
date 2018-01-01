@@ -11,34 +11,34 @@ Forever()
 When Green Flag Pressed
 Forever()
 (If {key {space} pressed} then)
-(|set power 7 to 0|)
-(|set power 8 to 0|)
-(|set power 11 to 0|)
-(|set power 12 to 0|)
+(|set power7 to 0|)
+(|set power8 to 0|)
+(|set power11 to 0|)
+(|set power12 to 0|)
 
 When [w] pressed
-|set power 7 to speed|
-|set power 8 to 0|
-|set power 11 to 0|
-|set power 12 to 0|
+|set power7 to speed|
+|set power8 to 0|
+|set power11 to 0|
+|set power12 to 0|
 
 When [a] pressed
-|set power 7 to 0|
-|set power 8 to speed|
-|set power 11 to 0|
-|set power 12 to 0|
+|set power7 to 0|
+|set power8 to speed|
+|set power11 to 0|
+|set power12 to 0|
 
 When [s] pressed
-|set power 7 to 0|
-|set power 8 to 0|
-|set power 11 to speed|
-|set power 12 to 0
+|set power7 to 0|
+|set power8 to 0|
+|set power11 to speed|
+|set power12 to 0
 
 When [d] pressed
-|set power 7 to 0|
-|set power 8 to 0|
-|set power 11 to 0|
-|set power 12 to speed|
+|set power7 to 0|
+|set power8 to 0|
+|set power11 to 0|
+|set power12 to speed|
 
 When [q] pressed
 |change speed by 5|
@@ -76,15 +76,25 @@ If {Servo13 = -105} then
 When Green Flag Pressed 
 Forever()
 (If {pin13 = 1})
-|set power 7 to 0|
-|set power 8 to 0|
-|set power 11 to 0|
-|set power 12 to speed|
+|set power7 to 0|
+|set power8 to 0|
+|set power11 to 0|
+|set power12 to speed|
 
 When Green Flag Pressed 
 Forever()
 (If {pin16 = 1})
-|set power 7 to 0|
-|set power 8 to 0|
-|set power 11 to speed|
-|set power 12 to 0|
+|set power7 to 0|
+|set power8 to 0|
+|set power11 to speed|
+|set power12 to 0|
+
+When Green Flag Pressed
+Forever()
+(If {pin13 and pin16 = 1} then
+|set power7 to 0|
+|set power8 to 0|
+|set power11 to 0|
+|set power12 to 0|
+wait 1 second
+|set power
